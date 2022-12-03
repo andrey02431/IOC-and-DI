@@ -1,0 +1,24 @@
+Computing School :
+
+computing.schoolName=School of Computing
+computing.studentNum = 300
+computing.modulesAvailable = Spring Bootcamp
+
+
+Law School:
+
+law.schoolName = School of Law
+law.studentNum = 100
+law.modulesAvailable = Court Law
+
+Psychology School:
+
+psychology.schoolName = School of Psychology
+psychology.studentNum = 50
+psychology.modulesAvailable = CBT
+
+Sports School:
+
+sports.schoolName = School of Physical Education
+sports.studentNum = 130
+sports.modulesAvailable = PE

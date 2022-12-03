@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- Scan from config file -->
+    <context:property-placeholder location = "classpath:config.file"/>
+    
+    <!-- Define Beans -->
+
+    <bean id="slogan"
+          class="MySloganGenerator">
+
+    </bean>
+
+    <bean id = "computing"
+          class="ComputingSchool">
+        <constructor-arg value = "${computing.schoolName}"/>
+        <constructor-arg value = "${computing.studentNum} "/>
+        <constructor-arg value = "${computing.modulesAvailable}"/>
+    </bean>
+
+    <bean id = "law"
+          class="LawSchool">
+        <constructor-arg value = "${law.schoolName}"/>
+        <constructor-arg value = "${law.studentNum} "/>
+        <constructor-arg value = "${law.modulesAvailable}"/>
+
+
+        <property name="slogan" ref="slogan"/>
+    </bean>
+
+    <bean id = "psychology"
+          class="PsychologySchool">
+        <constructor-arg value = "${psychology.schoolName}"/>
+        <constructor-arg value = "${psychology.studentNum} "/>
+        <constructor-arg value = "${psychology.modulesAvailable}"/>
+
+    </bean>
+
+    <bean id = "sports"
+          class = "SportsSchool">
+        <constructor-arg value = "${sports.schoolName}"/>
+        <constructor-arg value = "${sports.studentNum} "/>
+        <constructor-arg value = "${sports.modulesAvailable}"/>
+    </bean>
+
+
+
+    
+
+    
+</beans>
+
+
+
+
+
